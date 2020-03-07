@@ -2,3 +2,13 @@
   margin: 0;
   padding: 0;
 }
+.hcm_map_big {
+  clip-path: url(#glass);
+}
+
+.glass_border {
+  fill: none;
+  stroke-opacity: 1;
+  stroke-width: 1px;
+  stroke: black;
+}

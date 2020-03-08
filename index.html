@@ -7,37 +7,37 @@
     <title>12C.01.04.Magnifying Glass</title>
   </head>
   <body>
-    <div id="map_container">
-      <!-- Det lille billede -->
-      <svg id="layer_1" data-name="layer_1" viewBox="0 0 500 300">
-        <image
-          class="hcm_map_small"
-          x="0"
-          y="5"
-          width="400"
-          height="300"
-          xlink:href="ho-chi-minh-city-map.jpg"
-        ></image>
+    <!-- Det lille billede -->
+    <svg id="layer_1" data-name="layer_1" viewBox="0 0 1000 800">
+      <image
+        class="hcm_map_small"
+        x="17"
+        y="35"
+        width="600"
+        height="650"
+        xlink:href="ho-chi-minh-city-map.jpg"
+      ></image>
+    </svg>
 
-        <!-- Magnifying glass-->
-        <clipPath id="glass">
-          <circle cx="105" cy="30" r="30"></circle>
+    <svg id="layer_2" data-name="layer_2" viewBox="0 0 1000 800">
+      <!-- Magnifying glass -->
+      <defs>
+        <clipPath id="clipping">
+          <circle class="inner" cx="150" cy="100" r="50"></circle>
         </clipPath>
+      </defs>
+      <!-- Det store billede -->
+      <image
+        class="hcm_map_big"
+        x="0"
+        y="0"
+        width="800"
+        height="950"
+        xlink:href="ho-chi-minh-city-map.jpg"
+      ></image>
 
-        <!-- Det store billede -->
-        <image
-          class="hcm_map_big"
-          x="-278"
-          y="-4"
-          width="1200"
-          height="600"
-          xlink:href="ho-chi-minh-city-map.jpg"
-        ></image>
-
-        <circle class="glass_border" cx="105" cy="30" r="30"></circle>
-      </svg>
-    </div>
-
+      <circle class="border" cx="150" cy="100" r="50"></circle>
+    </svg>
     <script src="script.js"></script>
   </body>
 </html>

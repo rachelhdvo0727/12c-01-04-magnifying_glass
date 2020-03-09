@@ -16,6 +16,7 @@ function init() {
 function theMouseDown() {
   console.log("mouseDown");
   HTML.map.addEventListener("mousemove", theMouseMove);
+  HTML.map.addEventListener("mouseup", theMouseUp);
   event.preventDefault();
 }
 
@@ -32,8 +33,8 @@ function theMouseMove() {
       1000 *
       (window.innerHeight / window.innerWidth)
   );
-
   console.log(HTML.clippedCircle.attributes);
+
   HTML.borderglass.setAttribute("cx", (event.pageX / window.innerWidth) * 1000);
   HTML.borderglass.setAttribute(
     "cy",
@@ -42,9 +43,13 @@ function theMouseMove() {
       (window.innerHeight / window.innerWidth)
   );
   console.log(HTML.borderglass.attributes);
+
+  //add (posX)* -1
+  //add (posY)* -1
 }
 
 function theMouseUp() {
   console.log("mouseUp");
   HTML.map.removeEventListener("mousemove", theMouseMove);
+  HTML.map.addEventListener("mousedown", theMouseDown);
 }
